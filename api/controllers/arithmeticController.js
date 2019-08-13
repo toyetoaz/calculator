@@ -11,6 +11,8 @@ exports.calculate = function(req, res) {
   });
 
   var operations = {
+    // using + operator to coerce variables to numbers to avoid string concatenation.
+    // Restoring the '+' signs to the 'add' operation to fix the test failures.
     'add':      function(a,b) { return +a + +b },
     'subtract': function(a,b) { return a - b },
     'multiply': function(a,b) { return a * b },
